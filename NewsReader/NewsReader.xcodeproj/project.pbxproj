@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		96B3EF17202828FA00AD562D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3EF16202828FA00AD562D /* AppDelegate.swift */; };
-		96B3EF19202828FA00AD562D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3EF18202828FA00AD562D /* ViewController.swift */; };
 		96B3EF1C202828FA00AD562D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B3EF1A202828FA00AD562D /* Main.storyboard */; };
 		96B3EF1E202828FA00AD562D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B3EF1D202828FA00AD562D /* Assets.xcassets */; };
 		96B3EF21202828FA00AD562D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B3EF1F202828FA00AD562D /* LaunchScreen.storyboard */; };
+		96B3EF292028297C00AD562D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3EF282028297C00AD562D /* ListViewController.swift */; };
+		96B3EF2B20282EC400AD562D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3EF2A20282EC400AD562D /* Item.swift */; };
+		96B3EF2E202838BC00AD562D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B3EF2D202838BC00AD562D /* WebKit.framework */; };
+		96B3EF30202838D500AD562D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3EF2F202838D500AD562D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		96B3EF13202828FA00AD562D /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B3EF16202828FA00AD562D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96B3EF18202828FA00AD562D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96B3EF1B202828FA00AD562D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96B3EF1D202828FA00AD562D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B3EF20202828FA00AD562D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96B3EF22202828FA00AD562D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B3EF282028297C00AD562D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		96B3EF2A20282EC400AD562D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		96B3EF2D202838BC00AD562D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		96B3EF2F202838D500AD562D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B3EF2E202838BC00AD562D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				96B3EF15202828FA00AD562D /* NewsReader */,
 				96B3EF14202828FA00AD562D /* Products */,
+				96B3EF2C202838BC00AD562D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +63,23 @@
 			isa = PBXGroup;
 			children = (
 				96B3EF16202828FA00AD562D /* AppDelegate.swift */,
-				96B3EF18202828FA00AD562D /* ViewController.swift */,
+				96B3EF2F202838D500AD562D /* DetailViewController.swift */,
 				96B3EF1A202828FA00AD562D /* Main.storyboard */,
+				96B3EF2A20282EC400AD562D /* Item.swift */,
+				96B3EF282028297C00AD562D /* ListViewController.swift */,
 				96B3EF1D202828FA00AD562D /* Assets.xcassets */,
 				96B3EF1F202828FA00AD562D /* LaunchScreen.storyboard */,
 				96B3EF22202828FA00AD562D /* Info.plist */,
 			);
 			path = NewsReader;
+			sourceTree = "<group>";
+		};
+		96B3EF2C202838BC00AD562D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96B3EF2D202838BC00AD562D /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B3EF19202828FA00AD562D /* ViewController.swift in Sources */,
+				96B3EF292028297C00AD562D /* ListViewController.swift in Sources */,
+				96B3EF2B20282EC400AD562D /* Item.swift in Sources */,
 				96B3EF17202828FA00AD562D /* AppDelegate.swift in Sources */,
+				96B3EF30202838D500AD562D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
