@@ -17,6 +17,15 @@ class ListViewController: UITableViewController, XMLParserDelegate{
         return items.count
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = self.tableView.indexPathForSelectedRow{
+            let item = items[indexPath.row]
+            let controller = segue.destination as! DetailViewController
+            controller.title = item.title
+            controller.link = item.link
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row].title
