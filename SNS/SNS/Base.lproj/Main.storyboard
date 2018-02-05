@@ -29,6 +29,7 @@
                                             <action selector="showActivityView:" destination="BYZ-38-t0r" id="wfP-Mi-UvF"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Item" id="6mA-0n-nVK"/>
                                 </items>
                             </toolbar>
                         </subviews>
